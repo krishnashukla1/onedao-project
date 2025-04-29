@@ -20,8 +20,8 @@ const Dashboard = () => {
                 const res = await axios.get('http://localhost:5000/products', {
                     headers: { Authorization: `Bearer ${token}` },
                 });
-                setProducts(res.data);
-                console.log("Products from API:", res.data);
+                setProducts(res.data.products || res.data);
+                console.log("Products from API:", res.data.products||res.data);
             } catch (err) {
                 const message = err?.response?.data?.message || 'Failed to fetch products';
                 setError(message);
