@@ -180,10 +180,28 @@ Response:
 {
   "message": "OTP verified successfully"
 }
+
 9] ---------------------PAGINATION----------
 
 GET http://localhost:5000/products/?page=1&limit=5
 GET http://localhost:5000/products?name=Dove
+{
+    "totalItems": 1,
+    "totalPages": 1,
+    "currentPage": 1,
+    "products": [
+        {
+            "id": 3,
+            "user_id": 2,
+            "name": "Dove Shampoo",
+            "description": "Hair cleanser for smooth hair",
+            "price": "15.99",
+            "stock": 100,
+            "createdAt": "2025-04-29T06:34:16.501Z",
+            "updatedAt": "2025-04-29T06:34:16.501Z"
+        }
+    ]
+}
 GET http://localhost:5000/products?sortBy=price&order=asc
 GET http://localhost:5000/products?price=10.5&stock=50
 
