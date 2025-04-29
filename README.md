@@ -180,6 +180,12 @@ Response:
 {
   "message": "OTP verified successfully"
 }
+9] ---------------------PAGINATION----------
+
+GET http://localhost:5000/products/?page=1&limit=5
+GET http://localhost:5000/products?name=Dove
+GET http://localhost:5000/products?sortBy=price&order=asc
+GET http://localhost:5000/products?price=10.5&stock=50
 
 ================================Frontend (React)================================
 Installation
